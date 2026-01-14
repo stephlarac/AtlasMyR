@@ -6,7 +6,7 @@ function Metales(){
 
     return(
         <section id="metales">
-            <h2>Nos especializamos en compra de: </h2>
+            <h2>Nos especializamos en la compra de: </h2>
             <Slider />
         </section>
     )

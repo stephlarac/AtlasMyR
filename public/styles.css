@@ -9,7 +9,7 @@
 }
 
 html {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 62.5%;
   color: #FCFCFD;
 }
@@ -20,21 +20,20 @@ body {
 
 .header{
   width:100%;
-  height:100px;
-  overflow:hidden;
+  height:50px;
   position:fixed;
   top:0;
   left:0;
   display:flex;
   justify-content:space-around;
   align-items:center;
-  background-color:#dbdbdb;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 0, 0, 0));
   z-index:4;
 }
 
 .logo{
-  height: 90%;
-  padding-right:10%;
+  height: 110%;
+  padding-left:0px;
 }
 
 a {
@@ -48,57 +47,70 @@ a {
 }
 
 #navbar a{
-  padding:5px 25px;
+  padding:5px 45px;
   font-size:1.5rem;
   font-weight:bold;
   transition-duration:0.4s;
 }
 
 #navbar a:hover{
-  background: #f5f3db ;
-  color: #24552A;
-  transition-duration: 0.4s;
-  font-size:1.6rem;
-  padding:100% 26px;
+  /*background: #848484 ;*/
+  color: #504d4d;
+  transition-duration: 0.2s;
+  font-size:1.7rem;
+  padding:100% 40px;
+}
+
+#servicios, #metales, #beneficios, #contacto{
+  height:calc(100vh);
+  padding-top: 100px;
+  width: 100%;
 }
 
 .welcome-section{
-  height:calc(100vh);
-  padding-top: 100px;
+  min-height:100vh;
   width: 100%;
-}
-
-#servicios, #metales, #beneficios, #contacto, #vacantes{
-  height:calc(100vh);
-  padding-top: 100px;
-  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .welcome-img{
+  position: absolute;
   width: 100%;
-  height: 100%;
-  opacity: .5;
-  z-index: 0;
+  height: 151%;
+  opacity: .25;
+  z-index: -1;
+}
+
+.left-sec{
+ width: 100%;
+ height: 100%;
+padding-left: 10%;
 }
 
 h1{
   font-family: "Bebas Neue";
-  position: absolute;
-  top: 40%;
-  width: 100%;
-  text-align: center;
-  font-size: 7rem;
+  width: 100%; 
+  padding-top: 40%;
+  text-align: left;
+  font-size: 5rem;
   color: #2b2a2a;
-  text-shadow: 3px 3px .5px #767575 ;
+  text-shadow: 2px 2px .5px #767575 ;
   z-index: 1;
 }
 
+p{
+  color: #2b2a2a;
+  padding-top: 5px;
+  font-size: 1.4rem;
+}
+
 .conoce-btn{
-  position: absolute;
-  top: 80%;
-  left: calc(50% - 70px);
+  margin-top: 15px;
+  margin-left: 25px;
   z-index: 1;
-  background-color: rgb(224, 53, 53);
+  background-color: #747a8e;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
@@ -121,6 +133,34 @@ color: rgb(224, 53, 53) ;
   background-color: #767575;
 }
 
+.right-sec{
+ position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-deco-img{
+  position: relative;
+  left: 15%;
+  padding-top: 80px;
+  z-index: 2;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.gray-shape {
+  position: absolute;
+  top: 55%;
+  left: 55%;
+  width: 82%;
+  height: 82%;
+  background: #747a8e;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
 #servicios{
   display: flex;
 }
@@ -139,7 +179,6 @@ color: rgb(224, 53, 53) ;
   margin-top: 10vh;
   height: 80%;
   margin-left: 3%;
-  
 }
 
 .info-servicios > h2{
@@ -168,20 +207,20 @@ color: rgb(224, 53, 53) ;
 #metales {
   background-color: #f5f5f5;
   width:100%;
+  height: 100vh;
 }
 
-#metales > h2{
-  font-size: 2rem;
-  font-family: 'Montserrat','Libre Baskerville','Bebas Neue';
+#metales>h2{
+  font-size: 3.5rem;
   color: #292929;
   position: relative;
-  top: -35px;
   padding-left: 60px;
   text-align: left;
+  width: 30%;
 }
 
 .slider-container{
-  height: calc(100vh - 250px);
+  height: calc(100vh - 300px);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -208,13 +247,14 @@ color: rgb(224, 53, 53) ;
 .principal-slide{
   padding: 0 15px;
   justify-self: center;
+   z-index: 2;
 }
 
 .slide-img{
-  height: 300px;
-  width: 370px;
+  height: 350px;
+  width: 350px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 10px;
+  border-radius: 50%;
   flex-grow: 2;
   position: static;
   transition: 3s ease-in ;
@@ -244,190 +284,163 @@ color: rgb(224, 53, 53) ;
 }
 
 .left-side-img, .right-side-img{
-  height: 200px;
+  height: 220px;
   width: 220px;
   border-radius: 10px;
   margin-top: 90px;
   transition: 3s ease-out;
+   border-radius: 50%;
 }
 
 .left-side-img{
-  transform: skewY(-10deg);
+  transform: skewY(-5deg);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   margin-right: 0px;
   transition: 2s;
 }
 
 .right-side-img{
-  transform: skewY(10deg);
+  transform: skewY(5deg);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .first{
   position: relative;
   z-index: 3;
+  top: -60px;
 }
 
 .second-l{
   z-index: 2;
   position: relative;
-  top: -270px; left: -30px;
+  top: -375px; left: -30px;
 }
 
 .second-r{
   z-index: 2;
   position: relative;
-  top: -270px; left: 30px;
+  top: -375px; left: 30px;
 }
 
 .third-l{
   z-index: 1;
   position: relative;
-  top: -540px; left: -50px;
+  top: -690px; left: -50px;
 }
 
 .third-r{
   z-index: 1;
   position: relative;
-  top: -540px; left: 50px;
+  top: -690px; left: 50px;
 }
 
-.beneficios-div{
-  height: calc(100vh - 200px);
-  width: 100%;
-  overflow: hidden;
+#beneficios{
+  background-color: #4a4a4a;
+  height: 110vh;
 }
 
-.beneficios-div > h2{
-  font-size: 1.7rem;
-  font-family: 'Montserrat', 'Bebas Neue';
-  color: #292929;
-  text-align: left;
-  margin: 50px 0 0 50px;
-}
-
-.beneficios-img{
-  width: 55%;
-  height: 70%;
-  margin-right: 0;
-  position: absolute;
-  right: 0;
-  opacity: .9;
-  z-index: -1;
-}
-
-.icons-div{
-  width: 100%;
-  height: 70%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  --icon-size: calc(var(--base-grid)*30);
-  padding-left: 15%;
-}
-
-.menu-text{
-  font-size: 1rem;
-  color: #202020;
+.wave-bg {
   position: relative;
-  left: -76px;
-  top: 90px;
-}
-
-.menu-button{
-    transform: scale(5);
-    height: 15px; 
-    position: absolute;
-    left: 50%;
-    margin: 40px 0 0 -500px;
-    border-radius: 50%;
-}
-
-.menu-button:hover{
-  box-shadow: rgba(163, 163, 163, 0.9) 1px 1px 2px;
-}
-
-#menu:not(:target)>a:first-of-type,
-#menu:target>a:last-of-type {
-  opacity: 1;
+  top: -150px;
+  width: 100%;
   z-index: 1;
 }
 
-#menu:not(:target)>.icon-plus:before,
-#menu:target>.icon-minus:before {
-    opacity: 1;
-}
-
-.icons-list{
-  list-style: none;
-  width: 10%;
-}
-
-.icon-text{
-  font-size: 1.5rem;
-  color: #202020;
-  margin-left: 25px;
-  font-weight: 600;
-}
-
-.icon-item{
-  width: 350px; 
+.background-img{
   position: absolute;
-  left: 10%;
-  transform: translate(0px, 0px);
-  transition: .7s;
-  opacity: 0;
+  top: 306vh;
+  width: 100%;
+  height: 118vh;
+  opacity: .1;
+  z-index: 0;
 }
 
-#menu:target>.icon-item{
-  opacity: 1;
-  margin: 0px 0 0 10px;
-  /* overflow: hidden; */
-  --angle: calc(60deg/4); 
-  --rotation: calc(var(--angle)*3 - var(--angle)*var(--icon-count));
-  transform:  rotate(var(--rotation)) translate(200px) rotate(calc(var(--rotation)*-1));
-  transition-delay: 0s;
+.benefit-text>h2{
+  position: relative;
+  top: -250px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.7rem;
 }
 
-.icon-component{
-  color: rgb(35, 35, 35);
-  transform: scale(2.5);
-}
-
-#contacto, #vacantes{
-  display: flex;
-}
-
-.contacto-img, .vacantes-img{
-  width: 40%;
+.beneficios-div{
+  position: relative;
+  top: -200px;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.benefit-component{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.benefit-component .img{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.benefit-component .icon{
+  position: relative;
+  top: -50px;
+  right: 0;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #747a8e;
+  z-index: 2;
+  padding: 5px;
+}
+
+.benefit-component .text{
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+  top: -10%;
+}
+
+#contacto .background-img{
+  position: absolute;
+  top: 402vh;
+  z-index: -1;
+}
+
+#contacto .wave-bg {
+  z-index: -1;
 }
 
 .info-contacto, .info-vacantes{
+  position: relative;
+  top: -400px;
+  z-index: 2;
+  max-width: 420px;
+  height: 95vh;
+  margin: auto;
+  margin-top: 6rem;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 0 5%;
+  justify-content: space-around;
+  padding: 4%;
 }
 
-.info-contacto>h2{
-  font-size: 2.5rem;
+.info-contacto>h2, .info-vacantes>h2{
+  font-size: 2.3rem;
   color: #202020;
-  padding: 3% 0 3% 10%;
+  padding: 5% 0 0% 0%;
   text-align: center;
-  width: 80%;
-}
-
-.info-vacantes>h2{
-  font-size: 2.5rem;
-  color: #202020;
-  padding-top: 10px;
-  text-align: center;
-  width: 100%;
-}
-
-.info-vacantes>h2:last-of-type{
-  padding-bottom: 15px;
 }
 
 .info-contacto label, .info-vacantes label {
@@ -438,23 +451,13 @@ color: rgb(224, 53, 53) ;
   display: inline-flex;
 }
 
-.form-contacto label[for=mensaje]{
+.form-contacto label[for=mensaje],.form-vacantes label[for=mensaje] {
    position: relative;
    top: -25px;
 }
 
-.form-vacantes>label[for=expreiencia]{
-  position: relative;
-  top: -8%;
-}
-
-.form-vacantes>label[for=resume]{
-  position: relative;
-  top: -11%;
-}
-  
 .info-contacto input[type=text], .info-contacto input[type=email], .info-contacto select, .info-contacto textarea,
-.info-vacantes input[type=text], .info-vacantes select, .info-vacantes textarea {
+.info-vacantes input[type=text], .info-vacantes input[type=email], .info-vacantes textarea {
   width: 80%;
   display: inline-flex;
   margin: 10px 0 7px 0;
@@ -475,25 +478,162 @@ color: rgb(224, 53, 53) ;
   cursor: pointer;
 }
 
-.info-vacantes input[type=submit]{
-  position: relative;
-  top: -20px
-}
-
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
+.footer {
+  background: linear-gradient(180deg, #403f3f 0%, #4a4a4a 100%);
+  padding: 3.5rem 10rem;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  align-items: flex-start;
+  gap: 3rem;
+  color: #d6d6d6;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-logo img {
+  max-width: 210px;
+  opacity: 1;
+}
+
+.footer-col{
+ text-align: left;
+}
+
+.footer h4 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.footer p,
+.footer a {
+  line-height: 1.6;
+  opacity: 0.85;
+  color: #d6d6d6;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+}
+
+.footer .phone {
+ 
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+}
+
+.footer strong {
+  color: #ffffff;
+}
+
+.job-section{
+  background-color: #4a4a4a;
+  height: 100vh;
+  position: relative;
+  top: -100px;
+}
+
+.job-section .wave-bg {
+  position: relative;
+  top: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+.job-section .background-img{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 118vh;
+  opacity: .1;
+  z-index: 0;
+}
+
+.job-section>h2{
+  position: relative;
+  top: -100px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.7rem;
+}
+
+.vacantes-components{
+  position: relative;
+  top: -50px;
+  height: 90%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.info-vacantes{
+  position: relative;
+  top: -50px;
+  height: 95vh;
+  justify-content: flex-start;
+}
+
+.info-vacantes h2{
+  padding: 5% 0;
+}
+
+.info-vacantes label{
+  width: 30%;
+  margin: 20px 0;
+}
+
+.form-vacantes>label[for=experience]{
+  position: relative;
+  top: -15%;
+}
+
+.form-vacantes>label[for=resume]{
+  position: relative;
+  top: -5%;
+}
+
+.info-vacantes input[type=text], .info-vacantes input[type=email], .info-vacantes textarea {
+  width: 70%;}
+
+.info-vacantes textarea{
+    height: 30%;
+}
+
 .info-vacantes .button-file{
+  display: inline-flex;
   color: #ffffff;
   background-color: #0f8edd;
   font-family: "Montserrat";
   font-size: 1.4rem;
-  padding: 10px 240px;
+  margin: 0 0 15px 0;
+  width: 70%;
+  padding: 14px 20px;
+  border: none;
   border-radius: 4px;
-  margin: 35px 0 0 0;
-  width: 80%;
-  text-align: center;
+  cursor: pointer;
+}
+
+
+.file-name{
+  text-align: right;
+  position: relative;
+  top: -10%;
 }
 
 .info-vacantes label .icon{
@@ -511,6 +651,165 @@ input[type=submit]:hover {
   cursor: pointer;
 }
 
+/******************************************************* RESPONSIVE DESIGN ********************************/
+/* Tablet */
+@media (max-width: 900px) {
+  #navbar a{
+    padding:5px 15px;
+  }
 
+  #navbar a:hover{
+  padding:80% 10px;
+}
+
+  .right-sec{
+ margin-top: 20%;
+}
+
+  .welcome-deco-img{
+    width: 80%;
+    height: 50%;
+}
+
+.info-servicios{
+  margin-top: 0vh;
+  height: 100%;
+}
+
+#metales>h2{
+  width: 70%;
+}
+
+.left-side, .right-side{
+ display: none;
+}
+
+.slide-img{
+  height: 300px;
+  width: 300px;
+}
+
+.wave-bg {
+  top: -130px;
+}
+
+.benefit-text>h2{
+  top: -180px;
+}
+
+.beneficios-div{
+  top: -120px;
+}
+
+.benefit-component .img{
+  height: 180px;
+  width: 180px;
+}
+
+.benefit-component .icon{
+  height: 50px;
+  width: 50px;
+}
+
+.footer {
+  padding: 3.5rem 0rem;
+  gap: 3rem;
+}
+
+.job-section>h2{
+  top:30px;
+}
+
+.vacantes-components{
+  top: 15%;
+  padding-bottom: 50px;
+}
+
+
+}
+
+/* Cellphone */
+@media (max-width: 680px) {
+  .info-servicios{
+  margin-top: -15vh;
+}
+
+#metales>h2{
+  width: 90%;
+  margin: -10vh 0 10vh 0;
+}
+
+.slide-img{
+  height: 250px;
+  width: 250px;
+}
+
+#beneficios, .job-section{
+  height: 210vh;
+}
+
+.background-img, .job-section .background-img{
+  height: 210vh;
+}
+
+.benefit-text>h2{
+  top: -150px;
+}
+
+.beneficios-div, .vacantes-components{
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefit-component .img{
+  height: 220px;
+  width: 220px;
+}
+
+.benefit-component .icon{
+  height: 70px;
+  width: 70px;
+}
+
+.benefit-component .text{
+ left: 30%;
+ top: -18%;
+}
+
+.info-contacto{
+  top: -260px;
+}
+
+.footer {
+  padding: 3.5rem 15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-section .background-img{
+  height: 214vh;
+}
+
+.job-section>h2{
+  top: 50px;
+}
+
+.vacantes-components{
+  top: 5%;
+  padding-bottom: 50px;
+}
+
+.job-section .wave-bg {
+  top: 210vh;
+}
+
+.info-vacantes{
+  top: -140px;
+}
+
+.info-vacantes h2{
+  margin-top: 0%;
+}
+}
 
 

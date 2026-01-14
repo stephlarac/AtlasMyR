@@ -1,23 +1,16 @@
 import React from 'react';
-import Header from './Header';
-import Welcome from './Welcome';
-import Servicios from './Servicios';
-import Metales from './Metales';
-import Beneficios from './Beneficios';
-import Contacto from './Contacto';
-import Vacantes from './Vacantes';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import Vacantes from "./Vacantes";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Welcome />
-      <Servicios />
-      <Metales />
-      <Beneficios />
-      <Contacto />
-      <Vacantes />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Vacantes" element={<Vacantes />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

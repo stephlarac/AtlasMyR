@@ -4,13 +4,14 @@ function Header(){
 
     return(
         <div className="header">
-            <img className="logo" src="./images/logo-fara.png" alt="Tutankamon"></img>
+            <img className="logo" src="./images/atlas-logo.png" alt="Atlas Logo"></img>
             <nav id="navbar">
                 <ul>
-                    <li><a className="nav-link" href="#servicios">SERVICIOS</a></li>
-                    <li><a className="nav-link" href="#beneficios">BENEFICIOS</a></li>
-                    <li><a className="nav-link" href="#contacto">CONTACTO</a></li>
-                    <li><a className="nav-link" href="#vacantes">VACANTES</a></li>
+                    <li><a className="nav-link" href="/#inicio">Inicio</a></li>
+                    <li><a className="nav-link" href="/#servicios">Servicios</a></li>
+                    <li><a className="nav-link" href="/#beneficios">Beneficios</a></li>
+                    <li><a className="nav-link" href="/#contacto">Contacto</a></li>
+                    <li><a className="nav-link" href="/vacantes">Vacantes</a></li>
                 </ul>
             </nav>
         </div>
