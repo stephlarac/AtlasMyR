@@ -39,9 +39,10 @@ function VacanciesForm(){
 
 
     return(
-       <div className="info-vacantes">
-               <h2>¡Únete a nuestro equipo!</h2>
-               <form className="form-vacantes" onSubmit={handleSubmit} encType="multipart/form-data" method="post">
+        <div className="vacantes-section">
+        <div className="info-vacantes">
+            <h2>¡Únete a nuestro equipo!</h2>
+            <form className="form-vacantes" onSubmit={handleSubmit} encType="multipart/form-data" method="post">
                 <label htmlFor="name">Nombre: </label>
                 <input type="text" id="name" name="name" placeholder="Ej. Juan Perez" required></input>
                 <label htmlFor="phone">Teléfono: </label>
@@ -51,13 +52,14 @@ function VacanciesForm(){
                 <label htmlFor="resume">CV: </label>
                 <label htmlFor="resume" className="button-file"><CloudUploadIcon className="icon"/> Cargar archivo </label>
                 <input id="resume" name="resume" type="file"  accept=".pdf,.jpg,.png"
-                     onChange={handleFileChange}></input>
+                    onChange={handleFileChange}></input>
                 {fileName && (
                     <p className="file-name">Archivo seleccionado: {fileName}</p>
                 )}
                 <input type="submit" value="¡Quiero trabajar!"></input>
-               </form>
-        </div> 
+            </form>
+            </div> 
+        </div>
     )
 }
 

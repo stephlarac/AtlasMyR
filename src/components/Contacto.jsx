@@ -30,11 +30,7 @@ function Contacto(){
 
     return(
         <section id="contacto">
-             <img className="background-img" src="./images/cobre.jpg" alt="Cobre"></img>
-             <svg class="wave-bg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <path d="M0,96L120,112C240,128,480,160,720,165.3C960,171,1200,149,1320,138.7L1440,128L1440,0L0,0Z"
-                fill="#4a4a4a"/>
-            </svg>
+            <img className="background-img" src="./images/cobre.jpg" alt="Cobre"></img>
             <div className="info-contacto">
                <h2>Contáctanos si deseas cotizar o tienes alguna duda</h2>
                <form className="form-contacto" onSubmit={handleSubmit} >
