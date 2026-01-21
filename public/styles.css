@@ -10,7 +10,7 @@
 
 html {
   font-family: "Fira Sans Condensed", sans-serif;
-  font-size: 62.5%;
+  font-size: 80%;
   color: #FCFCFD;
 }
 
@@ -125,7 +125,7 @@ p{
 }
 
 .conoce-btn{
-  margin-top: 15px;
+  margin-top: 5%;
   margin-left: 25px;
   z-index: 1;
   background-color: #747a8e;
@@ -137,7 +137,7 @@ p{
   justify-content: space-evenly;
   color: #f5f5f5;
   height: 35px;
-  width: 140px;
+  width: 180px;
   border: none;
   border-radius: 30px;
 }
@@ -181,14 +181,16 @@ color: rgb(224, 53, 53) ;
 }
 
 #servicios{
-  padding-top: 0;
+  padding-top: 0px;
   display: flex;
   align-items:end;
+  height: 100vh;
 }
 
 .servicios-img{
-  width: 45%;
-  height: 100%;
+  height: 80%;
+  max-width: 50%;
+  aspect-ratio: 10/8;
   margin-left: 10%;
 
 }
@@ -206,11 +208,11 @@ color: rgb(224, 53, 53) ;
 
 .info-servicios > h2{
   width: 80%;
-  font-size: 4rem;
+  font-size: 8vh;
 }
 
 .info-servicios > p{
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-top: 7%;
   text-align: left;
 }
@@ -236,7 +238,7 @@ color: rgb(224, 53, 53) ;
 }
 
 #metales>h2{
-  font-size: 3.5rem;
+  font-size: 6vh;
   color: #292929;
   padding-left: 60px;
   text-align: left;
@@ -259,6 +261,7 @@ color: rgb(224, 53, 53) ;
   grid-template-columns: 30px auto 30px;
   align-items: center;
   justify-content: center; 
+  
 }
 
 .left-side, .right-side{
@@ -285,8 +288,8 @@ color: rgb(224, 53, 53) ;
 }
 
 .slide-img{
-  height: 300px;
-  width: 300px;
+  height: 50vh;
+  aspect-ratio: 1/1;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   border-radius: 50%;
   position: static;
@@ -295,7 +298,7 @@ color: rgb(224, 53, 53) ;
 
 .principal-slide > p{
  font-family: "Anton", sans-serif;
- font-size: 20px;
+ font-size: 4vh;
  text-align: center;
  color: rgb(53, 39, 39) ;
 }
@@ -363,75 +366,83 @@ color: rgb(224, 53, 53) ;
   margin-left: -40%;
 }
 
-.wave-bg {
-  width: 100%;
-  z-index: 1;
-}
-
 #beneficios{
+  padding-top: 0;
   background-color: #4a4a4a;
-  display: grid;
   height: 90vh;
-  grid-template-rows: 20vh 80vh 5vh;
-}
-
-#beneficios .wave-bg {
-  position: relative;
-  top: -20vh;
-  z-index: -1;
+ display: grid; 
+ grid-template-rows: 15% 15% 60%;
+ z-index: -3;
 }
 
 .background-img{
   position: absolute;
   width: 100%;
-  height: 105vh;
   opacity: .1;
-  z-index: 0;
+  z-index: 1;
+}
+
+#beneficios .background-img, .job-section .background-img{
+ clip-path: xywh(0 0px 100% 100% round 0% 0% 36% 36%);
+}
+
+#beneficios .wave-bg {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .benefit-text>h2{
-  position: relative;
-  top: 80px;
   color: #ffffff;
   text-align: center;
   font-size: 2.7rem;
+ padding-top: 1%;
+ z-index: 2;
 }
 
 .beneficios-div{
-  position: relative;
-  top: 60px;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 2;
+  
 }
 
-.benefit-component{
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
+.benefit-component, .vacantes-components{
+  position: relative;
+  text-align: center;
+}
+
+.img-wraper{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .benefit-component .img{
-  height: 250px;
-  width: 250px;
+  width: 60%;
+  aspect-ratio: 1;
   border-radius: 50%;
   z-index: 1;
 }
 
 .benefit-component .icon{
   position: relative;
-  top: -50px;
-  right: 0;
+  top: -70px;
+  right: -25%;
   height: 70px;
   width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
   border-radius: 50%;
   color: #ffffff;
   background-color: #747a8e;
   z-index: 2;
-  padding: 5px;
 }
 
 .benefit-component .text{
@@ -439,59 +450,73 @@ color: rgb(224, 53, 53) ;
   font-size: 1.8rem;
   text-align: center;
   position: relative;
-  top: -10%;
+  top: -40px;
 }
 
-#contacto{
-  z-index: 8;
-  height: 105vh;
+#contacto, .vacantes-section{
+  padding-top: 0;
+  z-index: 1;
+  height: 100vh;
 }
 
-#contacto .background-img{
-  position: relative;
-  top: 0;
-  z-index: -2;
+#contacto .wave-bg, .vacantes-section .wave-bg {
+  width: 100%;
+  height: 20%;
+  z-index: 3;
 }
 
-.info-contacto{
-  position: relative;
-  top: -120vh;
+#contacto .background-img, .vacantes-section .background-img{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: .1;
+  z-index: -1;
 }
 
 .info-contacto, .info-vacantes{
+  position: relative;
+  top: -140px;
   z-index: 2;
-  max-width: 420px;
-  height: 95vh;
+  max-width: 30%;
+  max-height: 80vh;
   margin: auto;
-  margin-top: 6rem;
+  margin-top: 5%;
   background: #fff;
   border-radius: 16px;
-  padding: 2.5rem;
+  padding: 5rem;
   box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 4%;
-}
+  }
 
-.info-contacto>h2, .info-vacantes>h2{
+.form-contacto>h2, .info-vacantes>h2{
   font-size: 2.3rem;
   color: #202020;
-  padding: 5% 0 0% 0%;
+  padding: 5% 0 5% 0%;
   text-align: center;
 }
 
-.info-contacto label, .info-vacantes label {
-  font-size: 1.5rem;
-  color: #202020;
-  width: 20%;
-  margin: 10px 0;
-  display: inline-flex;
+.form-group{
+  display: flex;
+  align-items: center;
 }
 
-.form-contacto label[for=mensaje],.form-vacantes label[for=mensaje] {
-   position: relative;
-   top: -25px;
+.form-contacto, .form-vacantes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.form-contacto{
+  min-height: 70vh;
+}
+
+.form-vacantes{
+  min-height: 50vh;
+}
+
+.info-contacto label, .info-vacantes label {
+  font-size: 2vh;
+  color: #202020;
+  width: 20%;
 }
 
 .info-contacto input[type=text], .info-contacto input[type=email], .info-contacto select, .info-contacto textarea,
@@ -567,7 +592,6 @@ input[type=submit]:hover {
 }
 
 .footer .phone {
- 
   font-size: 1.25rem;
   font-weight: 700;
   color: #ffffff;
@@ -593,56 +617,35 @@ input[type=submit]:hover {
 }
 
 .job-section{
+  padding-top: 0;
   background-color: #4a4a4a;
-  height: 100vh;
-  position: relative;
-  top: -100px;
-}
-
-.job-section .wave-bg {
-  position: relative;
-  top: 100vh;
-  width: 100%;
-  z-index: -1;
+  height: 90vh;
+ display: grid; 
+ grid-template-rows: 30% 70%;
 }
 
 .job-section .background-img{
   position: absolute;
   top: 0;
   width: 100%;
-  height: 118vh;
+  height: 107vh;
   opacity: .1;
   z-index: 0;
 }
 
 .job-section>h2{
-  position: relative;
-  top: -100px;
+  padding-top: 60px;
   color: #ffffff;
   text-align: center;
   font-size: 2.7rem;
 }
 
-.vacantes-section{
-  height: 85vh;
-}
-
 .vacantes-components{
-  position: relative;
-  top: -10vh;
-  height: 85vh;
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-}
-
-.info-vacantes{
-  position: relative;
-  top: -50px;
-  height: 95vh;
-  justify-content: flex-start;
 }
 
 .info-vacantes h2{
@@ -656,7 +659,7 @@ input[type=submit]:hover {
 
 .form-vacantes>label[for=experience]{
   position: relative;
-  top: -15%;
+  top: 10px;
 }
 
 .form-vacantes>label[for=resume]{
@@ -723,7 +726,7 @@ input[type=submit]:hover {
 }
 
 #metales>h2{
-  width: 70%;
+  width: 50%;
 }
 
 .slider-container{
@@ -737,10 +740,6 @@ input[type=submit]:hover {
 .slide-img{
   height: 300px;
   width: 300px;
-}
-
-.wave-bg {
-  top: -130px;
 }
 
 .background-img{
@@ -767,7 +766,30 @@ input[type=submit]:hover {
 .benefit-component .icon{
   height: 50px;
   width: 50px;
+  position: relative;
+  left: 70px;
 }
+
+#contacto .wave-bg{
+  height: 8%;
+}
+
+.info-contacto, .info-vacantes{
+  max-width: 50%;
+}
+
+.info-contacto{
+  max-height: 90vh;
+}
+
+.form-contacto{
+  min-height: 70vh;
+}
+
+.form-vacantes{
+  min-height: 50vh;
+}
+
 
 .footer {
   padding: 3.5rem 0rem;
@@ -852,6 +874,7 @@ input[type=submit]:hover {
 
 #metales>h2{
   width: 90%;
+  font-size: 4vh;
   margin: -10vh 0 10vh 0;
 }
 
@@ -860,29 +883,35 @@ input[type=submit]:hover {
   width: 250px;
 }
 
-#beneficios, .job-section{
-  height: 200vh;
+#beneficios{
+  height: 135vh;
+  grid-template-rows: 2% 3% auto;
+}
+
+.job-section{
+  height: 135vh;
+  grid-template-rows: 3% auto;
 }
 
 .background-img, .job-section .background-img{
-  height: 190vh;
+  height: 135vh;
 }
 
 .benefit-text>h2{
-  top: 0vh;
+  margin-top: 20px;
 }
 
 .beneficios-div, .vacantes-components{
   position: relative;
-  top: -10vh;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 200vh;
+  height: 100%;
 }
 
 .benefit-component{
-  height: 58vh;
+  height: 39vh;
 }
 
 .benefit-component .img{
@@ -891,31 +920,29 @@ input[type=submit]:hover {
 }
 
 .benefit-component .icon{
-  height: 70px;
-  width: 70px;
+ left: 15px;
 }
 
-.benefit-component .text{
- left: 30%;
- top: -18%;
+#contacto, .vacantes-section{
+  height: 80vh;
 }
 
-#beneficios .wave-bg {
-  position: relative;
-  top: 480px;
+.info-contacto, .info-vacantes{
+  margin-top: 60%;
+  max-width: 90%;
+  max-height: 80vh;
+   padding: 3rem;
 }
 
-#contacto .background-img{
-  position: relative;
-  top: -100px;
-  height: 105vh;
+.info-vacantes{
+  top: -350px;
 }
 
-.info-contacto{
-  top: -130vh;
-  padding: 60px;
-  width: 80%;
+.form-contacto, .form-vacantes{
+  
+  padding: 0;
 }
+
 
 .footer {
   padding: 3.5rem 5rem;
@@ -926,6 +953,10 @@ input[type=submit]:hover {
     "center nav"
     "schedule nav";
    
+}
+
+.footer h4 {
+  font-size: 1.4rem;
 }
 
 .footer-logo{
@@ -949,41 +980,7 @@ input[type=submit]:hover {
   grid-area: schedule;
 }
 
-.job-section{
-  height: 214vh;
-}
 
-.job-section .background-img{
-  height: 214vh;
-}
-
-.job-section>h2{
-  top: 50px;
-}
-
-.vacantes-components{
-  top: 5%;
-  padding-bottom: 50px;
-}
-
-.job-section .wave-bg {
-  top: 210vh;
-}
-
-
-.vacantes-section{
-  height: 48vh;
-}
-
-.info-vacantes{
-  top: -30vh;
-  height: 80vh;
-  width: 80%;
-}
-
-.info-vacantes h2{
-  margin-top: 0%;
-}
 }
 
 

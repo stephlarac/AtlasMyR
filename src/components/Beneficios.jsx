@@ -11,6 +11,14 @@ function Beneficios(){
     return(
         <section id="beneficios">
             <img className="background-img" src="./images/reciclaje-sinfondo.png" alt="Chatarrera"></img> 
+             <div className="wave">
+                <svg class="wave-bg" viewBox="0 0 1440 170" preserveAspectRatio="none">
+                    <path d="M0,0 
+                    C460,220,980,220,1440,0
+                    Z"
+                    fill="#f5f5f5"/> 
+                </svg>
+            </div>
             <div className="benefit-text">
                 <h2>Beneficios de trabajar con nosotros</h2>
             </div>
@@ -20,10 +28,6 @@ function Beneficios(){
                 <BenefitComponent img="./images/payment2.png" Icon={PaidIcon} text="Velocidad de pago"/>
                 <BenefitComponent img="./images/workers2.png" Icon={SocialDistanceIcon} text="Agilidad en descargas"/>
             </div>
-            <svg class="wave-bg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <path d="M0,96L120,112C240,128,480,160,720,165.3C960,171,1200,149,1320,138.7L1440,128L1440,0L0,0Z"
-                fill="#4a4a4a"/>
-            </svg>
         </section>
     )
 }

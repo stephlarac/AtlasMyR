@@ -40,22 +40,35 @@ function VacanciesForm(){
 
     return(
         <div className="vacantes-section">
+               <svg class="wave-bg" viewBox="0 0 1440 170" preserveAspectRatio="none">
+                    <path d="M0,0 
+                    C460,220,980,220,1440,0
+                    Z"
+                fill="#4a4a4a"/></svg>
         <div className="info-vacantes">
             <h2>¡Únete a nuestro equipo!</h2>
             <form className="form-vacantes" onSubmit={handleSubmit} encType="multipart/form-data" method="post">
-                <label htmlFor="name">Nombre: </label>
-                <input type="text" id="name" name="name" placeholder="Ej. Juan Perez" required></input>
-                <label htmlFor="phone">Teléfono: </label>
-                <input type="text" id="phone" name="phone" placeholder="Ej. 01 0000 0000" required></input>
-                <label htmlFor="experience">Experiencia: </label>
-                <textarea id="experience" name="experience" placeholder="Ej. Sé manejar montacargas..." />
-                <label htmlFor="resume">CV: </label>
-                <label htmlFor="resume" className="button-file"><CloudUploadIcon className="icon"/> Cargar archivo </label>
-                <input id="resume" name="resume" type="file"  accept=".pdf,.jpg,.png"
-                    onChange={handleFileChange}></input>
-                {fileName && (
-                    <p className="file-name">Archivo seleccionado: {fileName}</p>
-                )}
+                <div className="form-group"> 
+                    <label htmlFor="name">Nombre: </label>
+                    <input type="text" id="name" name="name" placeholder="Ej. Juan Perez" required></input>
+                </div>
+                 <div className="form-group"> 
+                    <label htmlFor="phone">Teléfono: </label>
+                    <input type="text" id="phone" name="phone" placeholder="Ej. 01 0000 0000" required></input>
+                </div>
+                <div className="form-group"> 
+                    <label htmlFor="experience">Experiencia: </label>
+                    <textarea id="experience" name="experience" placeholder="Ej. Sé manejar montacargas..." />
+                </div>
+                <div className="form-group"> 
+                    <label htmlFor="resume">CV: </label>
+                    <label htmlFor="resume" className="button-file"><CloudUploadIcon className="icon"/> Cargar archivo </label>
+                    <input id="resume" name="resume" type="file"  accept=".pdf,.jpg,.png"
+                        onChange={handleFileChange}></input>
+                    {fileName && (
+                        <p className="file-name">Archivo seleccionado: {fileName}</p>
+                    )}
+                </div>
                 <input type="submit" value="¡Quiero trabajar!"></input>
             </form>
             </div> 
