@@ -10,10 +10,10 @@ function Footer(){
                 <div class="footer-col nav">
                     <h4>Navegación</h4>
                     <ul>
-                    <li><a href="#/#inicio">Inicio</a></li>
-                    <li><a href="#/#servicios">Servicios</a></li>
-                    <li><a href="#/#beneficios">Beneficios</a></li>
-                    <li><a href="#/vacantes">Vacantes</a></li>
+                    <li><a href="#/#inicio">Inicio </a></li>
+                    <li><a href="#/#servicios">Servicios </a></li>
+                    <li><a href="#/#beneficios">Beneficios </a></li>
+                    <li><a href="#/vacantes">Vacantes </a></li>
                     </ul>
                 </div>
                 <div class="footer-col center">

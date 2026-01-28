@@ -377,13 +377,14 @@ color: rgb(224, 53, 53) ;
 
 .background-img{
   position: absolute;
+  height: 115%;
   width: 100%;
   opacity: .1;
   z-index: 1;
 }
 
 #beneficios .background-img, .job-section .background-img{
- clip-path: xywh(0 0px 100% 100% round 0% 0% 36% 36%);
+ clip-path: xywh(0 0px 100% 100% round 10% 10% 36% 36%);
 }
 
 #beneficios .wave-bg {
@@ -475,42 +476,37 @@ color: rgb(224, 53, 53) ;
 
 .info-contacto, .info-vacantes{
   position: relative;
-  top: -140px;
+  top: -50px;
   z-index: 2;
   max-width: 30%;
-  max-height: 80vh;
+  max-height: 110vh;
+  min-height: 60vh;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 0%;
   background: #fff;
   border-radius: 16px;
-  padding: 5rem;
+  padding: 3% 5rem 3% 5rem;
+   box-sizing: border-box;
   box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  }
+
+  .form-contacto, .form-vacantes{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
 .form-contacto>h2, .info-vacantes>h2{
   font-size: 2.3rem;
   color: #202020;
-  padding: 5% 0 5% 0%;
+  padding: 1rem 0 2rem 0;
   text-align: center;
 }
 
 .form-group{
   display: flex;
   align-items: center;
-}
-
-.form-contacto, .form-vacantes{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.form-contacto{
-  min-height: 70vh;
-}
-
-.form-vacantes{
-  min-height: 50vh;
 }
 
 .info-contacto label, .info-vacantes label {
@@ -810,6 +806,10 @@ input[type=submit]:hover {
 /* Cellphone */
 @media (max-width: 680px) {
 
+  html {
+  font-size: 70%;
+}
+
   .header{
     justify-content: space-around;
   }
@@ -827,11 +827,13 @@ input[type=submit]:hover {
     top: 10px;
     right: -50px;
     flex-direction: column;
-    background: transparent;
+    background-color: rgba(235, 235, 235, 0.8);
+    border-radius: 20%;
     width: 200px;
     padding: 1rem 0;
     display: none;
     height: 15rem;
+    font-size: 80%;
   }
 
   .nav-links.active {
@@ -902,25 +904,23 @@ input[type=submit]:hover {
 }
 
 .beneficios-div, .vacantes-components{
+  height: 100%;
+  margin-top: 5%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-}
-
-.benefit-component{
-  height: 39vh;
+  justify-content: space-between;
+  
 }
 
 .benefit-component .img{
-  height: 220px;
-  width: 220px;
+  height: 160px;
+  width: 160px;
 }
 
 .benefit-component .icon{
- left: 15px;
+ left: 17px;
 }
 
 #contacto, .vacantes-section{
@@ -934,29 +934,30 @@ input[type=submit]:hover {
    padding: 3rem;
 }
 
-.info-vacantes{
-  top: -350px;
+.info-contacto{
+  top: -200px;
 }
 
-.form-contacto, .form-vacantes{
-  
-  padding: 0;
+.info-vacantes{
+  top: -300px;
 }
 
 
 .footer {
   padding: 3.5rem 5rem;
+  text-align: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
    grid-template-areas:
-    "logo logo"
-    "center nav"
-    "schedule nav";
+    "logo"
+    "center"
+    "schedule"
+    "nav";
    
 }
 
 .footer h4 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .footer-logo{
@@ -965,19 +966,26 @@ input[type=submit]:hover {
   aspect-ratio: 15 / 5;
 }
 
-.footer center{
+.footer .center{
   grid-area: center;
+  text-align: center;
 }
 
 .footer .nav{
   grid-area: nav;
-  line-height: 4rem;
+  line-height: 0rem;
   text-align: center;
   font-size: 5rem;
+  display: inline;
+}
+
+.footer .nav li{
+   display: inline;
 }
 
 .footer .schedule{
   grid-area: schedule;
+  text-align: center;
 }
 
 
