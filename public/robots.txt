@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map
+
+Sitemap: https://atlasmyr.com/sitemap.xml
